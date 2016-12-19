@@ -1,23 +1,32 @@
 @mixin button-enabled {
-  background-color: $buttons-enabled;
+  background-color: $sort-buttons-enabled;
   border: none;
   height: 30px;
   width: 30%;
-  font-family: 'Raleway', sans-serif;
-  color: $button-font-color;
+  font-family: 'Fira Sans', sans-serif;
+  color: $buttons-font-enabled;
   font-size: 20px
 }
 
 @mixin button-disabled {
-  background-color: $button-disabled;
+  background-color: $sort-buttons-disabled;
+  color: $buttons-font-disabled;
 }
 
 @mixin button-hover {
-  background-color: $button-hover;
+  background-color: $sort-buttons-hover;
 }
 
 html {
-  background-color: #F7EBEC;
+  background-color: #ecf0f1;
+}
+
+.header {
+  background-color: #34495e;
+}
+
+.search-input {
+  display: inline-block;
 }
 
 .login-page {
@@ -25,10 +34,8 @@ html {
 }
 
 .shoot-the-breeze {
-  font-family: 'Molle', sans-serif;
-  font-size: 60px;
-  margin-top: 70px;
-  margin-bottom: 10px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 30px;
 }
 
 .submit-button {
