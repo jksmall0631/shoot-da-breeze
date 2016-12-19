@@ -1,0 +1,72 @@
+@mixin button-enabled {
+  background-color: $buttons-enabled;
+  border: none;
+  height: 30px;
+  width: 30%;
+  font-family: 'Raleway', sans-serif;
+  color: $button-font-color;
+  font-size: 20px
+}
+
+@mixin button-disabled {
+  background-color: $button-disabled;
+}
+
+@mixin button-hover {
+  background-color: $button-hover;
+}
+
+html {
+  background-color: #F7EBEC;
+}
+
+.login-page {
+  text-align: center;
+}
+
+.shoot-the-breeze {
+  font-family: 'Molle', sans-serif;
+  font-size: 60px;
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  @include button-enabled;
+  border-radius: 3px;
+&:hover {
+  @include button-hover;
+}
+&:disabled {
+  @include button-disabled;
+  }
+}
+
+.login-logout {
+  @include button-enabled;
+  border-radius: 3px;
+&:hover {
+  @include button-hover;
+}
+&:disabled {
+  @include button-disabled;
+  }
+}
+
+
+.message-container {
+  background-color: white;
+  border: 2px solid black;
+  height: 350px;
+  width: 80%;
+  margin: 40px auto;
+  padding: 0;
+  overflow: scroll;
+
+}
+
+.user-input {
+  height: 30px;
+  width: 40%;
+  font-size: 20px
+}
