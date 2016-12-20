@@ -31,7 +31,7 @@ body {
 
 .header {
   background-color: #34495e;
-  height: 70px;
+  height: 10vh;
 }
 
 .search-input {
@@ -81,7 +81,7 @@ body {
   }
 }
 
-.logoutbutton{
+.logoutbutton, .loginbutton{
   @include button-enabled;
   border-radius: 5px;
   float: right;
@@ -94,20 +94,9 @@ body {
   }
 }
 
-.loginbutton{
-  @include button-enabled;
-  border-radius: 5px;
-&:hover {
-  @include button-hover;
-}
-&:disabled {
-  @include button-disabled;
-  }
-}
-
 .message-container {
   background-color: white;
-  height: 90vh;
+  height: 85vh;
   width: 70%;
   padding: 0;
   overflow: scroll;
@@ -168,4 +157,29 @@ aside {
 .input-container button{
   float: right;
   margin: 15px 20px 0 0;
+}
+
+.pls-login {
+  background-color: #7f8c8d;
+  position: absolute;
+  top: 90vh;
+  height: 5vh;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+.current-user {
+  background-color: #7f8c8d;
+  opacity: 0.5;
+  position: absolute;
+  top: 80vh;
+  height: 4vh;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  padding: 10px;
 }
