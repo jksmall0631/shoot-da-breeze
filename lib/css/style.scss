@@ -8,6 +8,7 @@
   height: 40px;
   font-size: 15px;
   font-weight: lighter;
+  cursor: pointer;
 }
 
 @mixin button-disabled {
@@ -115,12 +116,10 @@ body {
 }
 
 aside {
+  width: 25%;
+  overflow: hidden;
   float: right;
-  margin-right: 20px;
-}
-
-.userbutton {
-  display: block;
+  margin: 5px 25px 0 0;
 }
 
 .user-input {
@@ -130,5 +129,43 @@ aside {
 }
 
 .userbutton{
-  background-color: magenta;
+  color: #34495e;
+  background-color: #ecf0f1;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: left;
+  &:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.input-container{
+  position: absolute;
+  background-color: #34495e;
+  top: 90vh;
+  height: 10vh;
+  width: 100%;
+}
+
+.input-container input, .input-container p, .input-container button{
+  display: inline-block;
+}
+
+.input-container input{
+  background-color: #ecf0f1;
+  width: 80%;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.input-container p{
+  color: #ecf0f1;
+  font-size: 20px;
+}
+
+.input-container button{
+  float: right;
+  margin: 15px 20px 0 0;
 }
