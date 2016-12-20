@@ -1,11 +1,13 @@
 @mixin button-enabled {
   background-color: $sort-buttons-enabled;
   border: none;
-  height: 30px;
-  width: 30%;
-  font-family: 'Fira Sans', sans-serif;
+  // font-family: 'Fira Sans', sans-serif;
   color: $buttons-font-enabled;
-  font-size: 20px
+  width: 80px;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: lighter;
 }
 
 @mixin button-disabled {
@@ -19,14 +21,40 @@
 
 html {
   background-color: #ecf0f1;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+  margin: 0;
 }
 
 .header {
   background-color: #34495e;
+  height: 70px;
 }
 
 .search-input {
-  display: inline-block;
+  display: inline;
+  height: 30px;
+  width: 38%;
+  border-radius: 5px;
+  border: none;
+  padding: 6px;
+  font-size: 20px;
+  color: #34495e;
+}
+
+.reverse-btn {
+  @include button-enabled;
+  float: right;
+  margin: 15px;
+
+&:hover {
+  @include button-hover;
+}
+&:disabled {
+  @include button-disabled;
+}
 }
 
 .login-page {
@@ -36,11 +64,14 @@ html {
 .shoot-the-breeze {
   font-family: 'Fira Sans', sans-serif;
   font-size: 30px;
+  display: inline-block;
+  margin: 10px 20px;
+  color: white;
 }
 
 .submit-button {
   @include button-enabled;
-  border-radius: 3px;
+  border-radius: 5px;
 &:hover {
   @include button-hover;
 }
@@ -49,9 +80,11 @@ html {
   }
 }
 
-.login-logout {
+.logoutbutton{
   @include button-enabled;
-  border-radius: 3px;
+  border-radius: 5px;
+  float: right;
+  margin: 15px;
 &:hover {
   @include button-hover;
 }
@@ -60,16 +93,34 @@ html {
   }
 }
 
+.loginbutton{
+  @include button-enabled;
+  border-radius: 5px;
+&:hover {
+  @include button-hover;
+}
+&:disabled {
+  @include button-disabled;
+  }
+}
 
 .message-container {
   background-color: white;
-  border: 2px solid black;
-  height: 350px;
-  width: 80%;
-  margin: 40px auto;
+  height: 80vh;
+  width: 70%;
   padding: 0;
   overflow: scroll;
+  margin: 0;
+  float: left;
+}
 
+aside {
+  float: right;
+  margin-right: 20px;
+}
+
+.userbutton {
+  display: block;
 }
 
 .user-input {
