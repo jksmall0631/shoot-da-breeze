@@ -108,6 +108,15 @@ body {
   padding-left: 10px;
 }
 
+.name-of-user {
+  color: #3498db;
+  font-weight: 500;
+}
+
+.pretty-time {
+  color: #9b59b6;
+}
+
 aside {
   width: 25%;
   overflow: hidden;
@@ -132,6 +141,7 @@ aside {
   font-size: 16px;
   margin-bottom: 10px;
   text-align: left;
+  outline: none;
   &:hover{
     text-decoration: underline;
     cursor: pointer;
