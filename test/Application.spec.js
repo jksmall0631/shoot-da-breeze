@@ -80,6 +80,14 @@ describe('InputSection', () => {
     expect(wrapper.state().disabled).to.equal(true);
   });
 
+  // it('simulates click events', () => {
+  //   const onClick = sinon.spy();
+  //   const wrapper = mount(<InputSection onClick={onClick} />);
+  //   wrapper.find('button').last().simulate('click');
+  //   expect(onClick.calledOnce).to.equal(true);
+  // });
+
+
   // it('should change message state on onChange', () => {
   //   const onChange = sinon.spy();
   //   const wrapper = mount(<InputSection onChange={onChange}/>);
@@ -88,7 +96,7 @@ describe('InputSection', () => {
   //   expect(onChange.called).to.be.true;
   // })
 
-  
+
 });
 
 // currentMessage: '',
