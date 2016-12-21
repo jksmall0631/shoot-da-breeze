@@ -61,6 +61,13 @@ describe('Application', () => {
 
   });
 
+  it('calls componentDidMount', () => {
+    sinon.spy(Application.prototype, 'componentDidMount');
+    const wrapper = mount(<Application />);
+    expect(Application.prototype.componentDidMount.calledOnce).to.equal(true);
+  });
+
+
 });
 
 describe('InputSection', () => {
@@ -104,7 +111,7 @@ describe('InputSection', () => {
     expect(wrapper.state('currentMessage')).to.equal('bla');
   })
 
-  
+
 
 });
 
