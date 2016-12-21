@@ -9,6 +9,7 @@
   font-size: 15px;
   font-weight: lighter;
   cursor: pointer;
+  outline: none;
 }
 
 @mixin button-disabled {
@@ -83,11 +84,13 @@ body {
 
 .logoutbutton, .loginbutton{
   @include button-enabled;
+  background-color: #1abc9c;
   border-radius: 5px;
   float: right;
   margin: 15px;
 &:hover {
   @include button-hover;
+  background-color: #16a085;
 }
 &:disabled {
   @include button-disabled;
@@ -96,12 +99,13 @@ body {
 
 .message-container {
   background-color: white;
-  height: 85vh;
-  width: 70%;
+  height: 75vh;
+  width: 68%;
   padding: 0;
   overflow: scroll;
   margin: 0;
   float: left;
+  padding-left: 10px;
 }
 
 aside {
@@ -164,9 +168,9 @@ aside {
 }
 
 .pls-login {
-  background-color: #7f8c8d;
+  background-color: #D1CED2;
   position: absolute;
-  top: 90vh;
+  top: 82vh;
   height: 5vh;
   width: 100%;
   font-size: 20px;
@@ -176,11 +180,10 @@ aside {
 }
 
 .current-user {
-  background-color: #7f8c8d;
-  opacity: 0.5;
+  background-color: #D1CED2;
   position: absolute;
   top: 80vh;
-  height: 4vh;
+  height: 5vh;
   width: 100%;
   font-size: 20px;
   text-align: center;
