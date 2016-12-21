@@ -70,6 +70,16 @@ describe('InputSection', () => {
     assert.equal(wrapper.type(), 'article')
   })
 
+  it('renders a text field', () => {
+   const wrapper = shallow(<InputSection />)
+   expect(wrapper.find('.user-input')).to.have.length(1);
+ });
+
+  it('renders a submit button', () => {
+   const wrapper = shallow(<InputSection />)
+   expect(wrapper.find('.submit-button')).to.have.length(1);
+ });
+
   it('should have a state of currentMessage that is an empty string', () => {
     const wrapper = shallow(<InputSection />)
     expect(wrapper.state().currentMessage).to.equal('');
@@ -80,22 +90,21 @@ describe('InputSection', () => {
     expect(wrapper.state().disabled).to.equal(true);
   });
 
-  // it('simulates click events', () => {
-  //   const onClick = sinon.spy();
-  //   const wrapper = mount(<InputSection onClick={onClick} />);
-  //   wrapper.find('button').last().simulate('click');
-  //   expect(onClick.calledOnce).to.equal(true);
-  // });
+  it('simulates click events', () => {
+    const onClick = sinon.spy();
+    const wrapper = mount(<InputSection onClick={onClick}/>);
+    wrapper.find('.submit-button').simulate('click');
+    expect(onClick).to.have.been.called
+  });
 
+  it('should change message state on onChange', () => {
+    const wrapper = mount(<InputSection />);
+    const input = wrapper.find('.user-input');
+    input.simulate('change', {target: {value: 'bla'}});
+    expect(wrapper.state('currentMessage')).to.equal('bla');
+  })
 
-  // it('should change message state on onChange', () => {
-  //   const onChange = sinon.spy();
-  //   const wrapper = mount(<InputSection onChange={onChange}/>);
-  //   const input = wrapper.find('input');
-  //   input.simulate('onChange', {keyCode: 40});
-  //   expect(onChange.called).to.be.true;
-  // })
-
+  
 
 });
 
