@@ -64,3 +64,45 @@
   }
 
 }
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2){
+    .shoot-the-breeze {
+      display: none;
+    }
+
+    .header {
+      padding-top: 10px;
+    }
+
+    .search-input {
+      display: block;
+      margin: auto;
+    }
+
+    .rapper {
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      margin: auto;
+    }
+
+    .loginbutton, .logoutbutton, .reverse-btn {
+      margin: 10px;
+    }
+
+    .message-container {
+      width: 100%;
+      height: 68vh;
+    }
+
+    .userbutton {
+      display: none;
+    }
+
+    aside {
+      display: none;
+    }
+  }
